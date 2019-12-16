@@ -16,4 +16,10 @@ public class Decrypt {
     public int getKey() {
         return this.key;
     }
+     public boolean isCipherString(String testString) {
+        return testString.toLowerCase().matches("[a-z]+");
+    }
+    public boolean isKeyValid(int key) throws ClassNotFoundException {
+        return Class.forName("java.lang.Integer").isInstance(key);
+    }
 }
