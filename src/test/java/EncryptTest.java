@@ -24,13 +24,13 @@ public class EncryptTest {
     }
 
     //Test Key getter
-//    @Test
-//    public void getKey_givesKey_Returns_Key() {
-//        Encrypt encrypt = new Encrypt();
-//        encrypt.setKey(1);
-//        int testKey = 1;
-//        assertEquals(testKey, encrypt.getKey());
-//    }
+    @Test
+    public void getKey_givesKey_Returns_Key() {
+        Encrypt encrypt = new Encrypt();
+        encrypt.setKey(1);
+        int testKey = 1;
+        assertEquals(testKey, encrypt.getKey());
+    }
 
     //Test key is a number
     @Test
@@ -57,16 +57,15 @@ public class EncryptTest {
         encrypt.setText("a");
         assertEquals(expected, Encrypt.encryptMessageWithKey(encrypt.getText(), encrypt.getKey()));
     }
+
+    Test a random case
+
+    public void encryptMessageWithKey_StringHello_WithKey10_returns(){
+        Encrypt encrypt = new Encrypt();
+        String expected = "govmywo";
+        encrypt.setKey(10);
+        encrypt.setText("welcome");
+        assertEquals(expected, Encrypt.encryptMessageWithKey(encrypt.getText(), encrypt.getKey()));
+    }
+
 }
-
-    //Test a random case
-
-//    public void encryptMessageWithKey_StringHello_WithKey10_returns(){
-//        Encrypt encrypt = new Encrypt();
-//        String expected = "govmywo";
-//        encrypt.setKey(10);
-//        encrypt.setText("welcome");
-//        assertEquals(expected, Encrypt.encryptMessageWithKey(encrypt.getText(), encrypt.getKey()));
-//    }
-//
-//}
