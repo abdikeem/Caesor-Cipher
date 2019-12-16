@@ -1,9 +1,7 @@
 public class Encrypt {
-      //init required variables
     private String text;
     private Integer key;
 
-    //getters and setters
     public void setText(String text) {
         this.text = text;
     }
@@ -18,5 +16,17 @@ public class Encrypt {
 
     public int getKey() {
         return this.key;
+    }
+    public boolean isTextString(String testString) {
+        String pattern = "[a-z]+";
+        return testString.matches(pattern);
+    }
+
+    public Boolean isKeyValid(int i) throws ClassNotFoundException {
+        return Class.forName("java.lang.Integer").isInstance(i);
+    }
+
+    public boolean isKeyRangeCorrect(int i) {
+        return i >= 0 && i <= 25;
     }
 }
