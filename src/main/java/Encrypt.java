@@ -1,7 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Encrypt {
+
+    //init required variables
     private String text;
     private Integer key;
 
+    //getters and setters
     public void setText(String text) {
         this.text = text;
     }
@@ -17,19 +23,25 @@ public class Encrypt {
     public int getKey() {
         return this.key;
     }
+
+    //validate that text is a string
     public boolean isTextString(String testString) {
         String pattern = "[a-z]+";
         return testString.matches(pattern);
     }
 
+    //validate that the key is a digit
     public Boolean isKeyValid(int i) throws ClassNotFoundException {
         return Class.forName("java.lang.Integer").isInstance(i);
     }
 
+    //validate that the key is a digit  between 0 and 25 both included
     public boolean isKeyRangeCorrect(int i) {
         return i >= 0 && i <= 25;
     }
-     static String encryptMessageWithKey(String text, int key) {
+
+    //encrypt text
+    static String encryptMessageWithKey(String text, int key) {
         Character[] lc = {'a', 'b', 'c', 'd', 'e', 'f', 'g',
                 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
                 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
@@ -43,4 +55,25 @@ public class Encrypt {
                     integerList.add(shift);
                 }
             }
+
+            if (text.charAt(i) == ' ') {
+                integerList.add(100);
+            }
+        }
+
+        for (Integer i : integerList) {
+            if (i == 100) {
+                ciphers.add(' ');
+                continue;
+            }
+            ciphers.add(lc[i]);
+        }
+        for (Character c : ciphers) {
+
+            ss.append(c.toString());
+        }
+        return ss.toString();
+    }
+
+
 }
