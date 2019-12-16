@@ -1,7 +1,7 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class EncryptTest {
 
   @Test
   public void runApp_countUpToOne_ArrayList() {
