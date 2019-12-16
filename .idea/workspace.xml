@@ -64,6 +64,16 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="EncryptTest.getKey_givesKey_Returns_Key" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaweek1.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EncryptTest" />
+      <option name="METHOD_NAME" value="getKey_givesKey_Returns_Key" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle" editBeforeRun="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -81,6 +91,11 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android JUnit.EncryptTest.getKey_givesKey_Returns_Key" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
