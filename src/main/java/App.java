@@ -1,4 +1,4 @@
-public class Caesor {
+public class App{
     private int key;
 
     /*
@@ -8,7 +8,7 @@ public class Caesor {
     */
 
 
-    public Caesor(int key) {
+    public App(int key) {
         this.key = key;
     }
     public String encrypt(String plainText) {
